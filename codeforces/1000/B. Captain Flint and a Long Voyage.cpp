@@ -1,4 +1,4 @@
-//https://codeforces.com/problemset/problem/50/A
+//https://codeforces.com/contest/1388/problem/B
 //*********Houssem Rekik*********
 #include <bits/stdc++.h>
 using namespace std; 
@@ -16,8 +16,21 @@ typedef vector<int> vi ;
 int main() 
 {
 	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	int n,m;cin>>n>>m;
-	if((n*m)%2==0)cout<<n*m/2;
-	if((n*m)%2==1)cout<<(n*m-1)/2;
+	int q;cin>>q;
+	while(q--)
+	{
+		int n; cin >> n ;
+		string ch="8";
+		for (int i = 0; i < (n-1)/4; i++)
+		{
+			ch+='8';
+		}
+		int l = n -ch.length();
+		for (int i = 1; i <= l; i++)
+		{
+			ch='9'+ch;
+		}
+		cout<<ch<<"\n";
+	}
 }
-//solved on 29 oct 2020
+//solved on 30 jul 2020

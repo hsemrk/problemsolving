@@ -1,4 +1,4 @@
-//https://codeforces.com/problemset/problem/50/A
+//https://codeforces.com/problemset/problem/1345/A
 //*********Houssem Rekik*********
 #include <bits/stdc++.h>
 using namespace std; 
@@ -9,15 +9,21 @@ typedef vector<int> vi ;
 #define mp make_pair
 #define pb push_back
 #define rd(t,n) for (int i = 0; i < n; i++)cin>>t[i]
-#define wr(t,n) for (int i = 0; i < n; i++)cout<<t[i]<<"\n"
+#define wr(t,n) for (int i = 0; i < n; i++)cout<<t[i]<<" "
 #define bug cout<<"*"
 #define mod 1000000007  //10 puis 9 +7
+
 
 int main() 
 {
 	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	int n,m;cin>>n>>m;
-	if((n*m)%2==0)cout<<n*m/2;
-	if((n*m)%2==1)cout<<(n*m-1)/2;
+	int q;cin>>q;
+	while(q--)
+	{
+		int n,m;cin>>n>>m;
+        if(min(n,m)==1)cout<<"YES\n";
+        else if(n==2 && m==2)cout<<"YES\n";
+        else cout<<"NO\n";
+	}
 }
-//solved on 29 oct 2020
+//solved on 23 oct 2020
